@@ -10,11 +10,11 @@ version 2.0.13 [1] with the following enhancement:
       HW acceleration.  The changes are just brought over
       from OpenSSL 1.0.2  (No new code development)
 
-    - FIPS 186-4: RSA key generation (bn_x931p.c)
-      Make OpenSSL FOM comform to FIPS186-4
+    - FIPS 186-4: RSA key generation
+      Make OpenSSL FOM conform to FIPS186-4
 
     - IG 9.10 requirement
-      The FOM module always executes the integrity test everytime
+      The FOM module always executes the integrity test every time
       it is loaded.  POST is executed only if the FIPS mode is enabled.
       If the system defines a function '_fips_config_check()',
       the function is called to check the config file and determine
@@ -31,7 +31,7 @@ version 2.0.13 [1] with the following enhancement:
       POST result in the shared memory (only writable by root).
       All other processes just ran the integrity test.
 
-    - muti-threading issue
+    - multi-threading issue
       The API allows users to specify the threadid callback
       functions, and that could lead the application to
       reference an invalid memory (an old threadid callback
@@ -51,7 +51,7 @@ under the 'fipscanister-dev' component dir:
 
 	components/openssl/openssl-fips-140/fipscanister-dev
 
-## Buildling the Oracle OpenSSL FIPS Object Module (FOM)
+## Building the Oracle OpenSSL FIPS Object Module (FOM)
 
 The detail description of the build instruction can be found in the Oracle
 Oracle Security Policy.
