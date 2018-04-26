@@ -39,6 +39,7 @@ version 2.0.13 [1] with the following enhancement:
       and use pthread_self() to identify the thread.
 
 The main consumer of the Oracle OpenSSL FIPS Object Module (FOM) is
+
     - Oracle Solaris server systems
     - Oracle ZFSSA
     - Oracle ILOM
