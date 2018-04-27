@@ -15,23 +15,22 @@ version 2.0.13 [1] with the following enhancement:
 
     - IG 9.10 requirement
       The FOM module always executes the integrity test every time
-      it is loaded.  POST is executed only if the FIPS mode is enabled.
+      it is loaded.  POST is executed only if FIPS mode is enabled.
       If the system defines a function '_fips_config_check()',
       the function is called to check the config file and determine
-      whether the FIPS mode is enabled or disabled.
-      If the function is not defined, the FIPS mode is enabled
-      by default.
+      whether FIPS mode is enabled or disabled.
+      If the function is not defined, FIPS mode is enabled by default.
 
       Note:
-      The FIPS mode is always enabled for Solaris and ZFSSA.
+      FIPS mode is always enabled for Solaris and ZFSSA.
       ILOM provides the function _fips_config_check().
 
     - IG 9.11 [ILOM only]
-      If the FIPS mode is enabled, run the POST once and cache the
-      POST result in the shared memory (only writable by root).
-      All other processes just ran the integrity test.
+      If FIPS mode is enabled, run the POST once and cache the
+      POST result in shared memory (only writable by root).
+      All other processes just run the integrity test.
 
-    - multi-threading issue
+    - Multi-threading issue
       The API allows users to specify the threadid callback
       functions, and that could lead the application to
       reference an invalid memory (an old threadid callback
